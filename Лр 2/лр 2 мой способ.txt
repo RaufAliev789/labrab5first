@@ -1,0 +1,22 @@
+print('Введите целое число')
+n = input()
+b = ' '
+try:
+    if n <0:
+        n = n * (-1)
+        n = int(n)
+        b = str(n%2) + b
+        n = n //2
+        b = b.replace('1', '2').replace('0', '1').replace('2', '0')
+        b = b + 1
+        print(b)
+
+    if n >= 0:
+
+        n = int(n)
+        while n>0:
+            b = str(n % 2) + b
+            n = n // 2
+        print(b)
+except:
+    print('Это не целое число')
